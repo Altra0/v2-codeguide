@@ -67,16 +67,24 @@ export default function RootLayout({
               <div className="flex-1 flex items-center justify-end gap-4">
                 <SignedOut>
                   <div className="hidden sm:flex items-center gap-3">
-                    <Button asChild variant="ghost" size="sm" className="h-9 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-blue-950 dark:hover:text-blue-400">
-                      <SignInButton />
-                    </Button>
-                    <Button asChild size="sm" className="h-9 bg-blue-600 hover:bg-blue-700 text-white px-4">
-                      <SignUpButton />
-                    </Button>
+                    <SignInButton mode="modal">
+                      <Button variant="ghost" size="sm" className="h-9 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-blue-950 dark:hover:text-blue-400">
+                        Sign In
+                      </Button>
+                    </SignInButton>
+                    <SignUpButton mode="modal">
+                      <Button size="sm" className="h-9 bg-blue-600 hover:bg-blue-700 text-white px-4">
+                        Sign Up
+                      </Button>
+                    </SignUpButton>
                   </div>
-                  <Button asChild variant="ghost" size="icon" className="sm:hidden h-9 w-9 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-blue-950 dark:hover:text-blue-400">
-                    <SignInButton />
-                  </Button>
+                  <div className="sm:hidden">
+                    <SignInButton mode="modal">
+                      <Button variant="ghost" size="icon" className="h-9 w-9 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-blue-950 dark:hover:text-blue-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                      </Button>
+                    </SignInButton>
+                  </div>
                 </SignedOut>
                 <SignedIn>
                   <UserButton 

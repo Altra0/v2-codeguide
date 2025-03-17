@@ -6,6 +6,7 @@ import { ArrowRight, Briefcase, GraduationCap, LineChart, Users } from 'lucide-r
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
 import { motion } from "framer-motion";
+import { SignUpButton } from "@clerk/nextjs";
 
 export default function HomePage() {
   const [hoveredPath, setHoveredPath] = useState<string | null>(null);
@@ -64,11 +65,11 @@ export default function HomePage() {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="mt-8"
           >
-            <Link href="/onboarding/basic-details">
+            <SignUpButton mode="modal">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 px-8 py-3 h-auto">
                 Start Your Journey <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-            </Link>
+            </SignUpButton>
           </motion.div>
         </motion.div>
       </section>
@@ -190,11 +191,11 @@ export default function HomePage() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <Link href="/onboarding/basic-details">
+            <SignUpButton mode="modal">
               <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100 px-10 py-6 text-lg h-auto">
                 Get Started Now
               </Button>
-            </Link>
+            </SignUpButton>
           </motion.div>
         </motion.div>
       </section>
