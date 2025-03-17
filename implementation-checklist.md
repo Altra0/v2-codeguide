@@ -16,11 +16,13 @@
 - [x] Set up Clerk authentication integration in the Next.js app, placing configuration files in `/frontend/config/clerk.js`
 - [x] Create common layout components (header, footer, navigation) using Tailwind CSS and ShadCN UI in `/frontend/components/`
 - [x] Implement Clerk authentication UI elements (SignInButton, SignUpButton, UserButton) in the layout
-- [ ] Create the landing page and onboarding flows for multiple user roles in `/frontend/pages/` as separate pages
+- [x] Create the landing page with modern design and clear value proposition
+- [ ] Build the AI career companion (CiCi) UI component (planned for later phase)
+- [x] Create basic About page
+- [ ] Create the onboarding flows for multiple user roles in `/frontend/pages/` as separate pages
 - [ ] Develop the personalized dashboard component that will display career pathway recommendations and AI insights in `/frontend/components/Dashboard.tsx`
 - [ ] Create UI components for the admin/moderator panel under `/frontend/pages/admin/`, ensuring role-based access controls are in place
-- [ ] Build the AI career companion (CiCi) UI component in `/frontend/components/CiCiWidget.tsx`, integrating conversational UI elements
-- [ ] **Validation**: Run `npm run dev` in `/frontend` and manually test routing and UI component interactions
+- [x] **Validation**: Run `npm run dev` in `/frontend` and manually test routing and UI component interactions
 
 ## Phase 3: Backend Development
 
