@@ -18,11 +18,14 @@
 - [x] Implement Clerk authentication as per docs
   - [x] Implement home page with Clerk authentication buttons
   - [x] Create onboarding/basic-details page with form for user profile data
-  - [ ] Create assessment page for different career profiles
+    - [x] Update form to collect first name, last name, and career profile only
+    - [x] Add detailed descriptions for career profiles
+    - [x] Redesign UI to match provided mockup with icons and grid layout
+  - [x] Create assessment page for different career profiles
 - [x] Create the landing page with modern design and clear value proposition
 - [ ] Build the AI career companion (CiCi) UI component in `/frontend/components/CiCiWidget.tsx`, integrating conversational UI elements
 - [x] Create basic About page
-- [ ] Create the onboarding flows for multiple user roles in `/frontend/pages/` as separate pages
+- [x] Create the onboarding flows for multiple user roles in `/frontend/pages/` as separate pages
 - [ ] Develop the personalized dashboard component that will display career pathway recommendations and AI insights in `/frontend/components/Dashboard.tsx`
   - [ ] Create basic dashboard layout
   - [ ] Implement career pathway visualization

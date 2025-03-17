@@ -1,7 +1,5 @@
 export interface UserProfile {
-  name: string;
-  email: string;
-  age: string;
-  gender: string;
+  firstName: string;
+  lastName: string;
   careerProfile: string;
 } 
