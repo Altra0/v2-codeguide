@@ -1,6 +1,20 @@
-import { clerkMiddleware } from '@clerk/nextjs/server'
+import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
+import { NextRequest } from 'next/server'
 
-export default clerkMiddleware()
+// Define routes that should be protected
+const isProtectedRoute = createRouteMatcher([
+  '/dashboard(.*)',
+  '/profile(.*)',
+  '/onboarding/career-assessment(.*)',
+  '/onboarding/roadmap(.*)'
+]);
+
+// Update clerkMiddleware to manually protect routes
+export default clerkMiddleware((auth, req: NextRequest) => {
+  if (isProtectedRoute(req)) {
+    auth.protect();
+  }
+});
 
 export const config = {
   matcher: [
